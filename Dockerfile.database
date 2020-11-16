@@ -1,0 +1,7 @@
+FROM msakhawat/mymariadb:centos
+
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=blog
+
+ADD ./database/script.sql /docker-entrypoint-initdb.d
+
